@@ -1,2 +1,10 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World!</text>
+<view>当前计数{{counter}}</view>
+<button size="mini" bindtap="addButton">+</button>
+<button size="mini" bindtap="subButton">-</button>
+<!-- 之前的getUserInfo已经废弃，需要用open-type和binduserinfo这种方法才能获得用户信息 -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleContorl">获取授权</button>
+<!-- open-data是内置组件 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
