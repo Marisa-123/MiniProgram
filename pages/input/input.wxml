@@ -1,0 +1,6 @@
+<!--pages/input/input.wxml-->
+<text>pages/input/input.wxml</text>
+<input type="digit"></input>
+<input password></input>
+<input placeholder="请输入内容"></input>
+<input confirm-type="next"></input>

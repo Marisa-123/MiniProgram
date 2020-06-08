@@ -1,0 +1,11 @@
+//JS代码
+var message = "Hello World";
+var name = "Marisa"
+var sum = function(n1,n2){
+  return n1 + n2
+}
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+}

@@ -1,0 +1,14 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs不允许使用绝对路径 -->
+<!-- <wxs src="/wxs/info.wxs"/ module="info"> -->
+<!-- 使用相对路径 -->
+<wxs src="../../wxs/info.wxs"  module="info"/>
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(10,20)}}</view>
+
+<view>{{format.priceFormat(price)}}</view>
+
+<view>{{time}}</view>
+<view>{{format.dateFormat(time,'yyyy-MM-dd hh:mm:ss')}}</view>

@@ -1,0 +1,5 @@
+<!--pages/image/image.wxml-->
+<text>pages/image/image.wxml</text>
+<button bindtap="handleImg">选中图片</button>
+<image src="{{imgPath}}"/>
+

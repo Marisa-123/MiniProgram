@@ -1,2 +1,30 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World!</text>
+<!-- <text class="title">Hello World!</text> -->
+<!-- 1. tab-control的练习 -->
+<w-tab-control titles="{{['流行','新款','精选','商品']}}"
+                bind:itemClick="tabControlClick"/>
+
+<!-- 2. 直接选中组件修改数据/调用方法 -->
+<button size="mini" bind:tap="handleInnerCpn">修改组件内的数据</button>
+<my-sel class="sel-class" id="sel-id"/>
+
+<view>----------------------------------</view>
+
+<!-- 3. 插槽的使用 -->
+<!-- <my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot> -->
+
+<!-- 插入一个进度条，value表示百分之60 -->
+<!-- <my-slot>
+  <slider value="60"></slider>
+</my-slot> -->
+
+<!-- 注意事项
+必须给每个插条起名字：name属性
+必须在Component组件js中添加 options：{multipleSlots: true} -->
+<my-slot>
+  <text slot="slot3">插入第三个插条</text>
+  <button size="mini" slot="slot2">插入第二个插条</button>
+  <slider slot="slot1"></slider>
+</my-slot>
