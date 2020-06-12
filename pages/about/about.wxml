@@ -1,2 +1,5 @@
 <!--pages/about/about.wxml-->
 <text>pages/about/about.wxml</text>
+<!--navigateBack表示返回 delta表示要返回几层 -->
+<navigator open-type="navigateBack" delta="1">返回</navigator>
+

@@ -1,2 +1,21 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World!</text>
+<!-- 换行要写在text中\n -->
+<text class="title">Hello World!\n</text>
+
+<button size="mini" bind:tap="handleShowToast">弹窗按钮1</button>
+<button size="mini" bind:tap="handleShowModal">弹窗按钮2</button>
+<button size="mini" bind:tap="handleShowLoading">弹窗按钮3</button>
+<button size="mini" bind:tap="handleShowAction">弹窗按钮4</button>
+<button size="mini" open-type="share">分享按钮</button>
+
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/about/about">跳转到about页面</navigator>
+
+<!-- 2.正向传数据name=marisa&age=18&height=1.65,在about.js中的onload可以接受到 -->
+<navigator url="/pages/about/about?name=marisa&age=18&height=1.65">跳转到about页面</navigator>
+
+<!-- 3.反向，在about中修改home的数据 -->
+<navigator url="/pages/about/about">{{title}}</navigator>
+
+另一种跳转方式
+<navigator url="/pages/about/about" bindtap="handlePushAbout">跳转到about</navigator>
